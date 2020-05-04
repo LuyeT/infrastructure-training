@@ -13,7 +13,7 @@ echo "--- installing remirepo ---"
 dnf -y install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
 echo "--- installing php resources ---"
-dnf -y install php{,-common,-fpm,-gd,-json,-mbstring,-mysqlnd,-opcache,-pdo,-sodium,-xml} mariadb{,-server}
+dnf -y install php{,-common,-fpm,-gd,-json,-mbstring,-mysqlnd,-opcache,-pdo,-xml} mariadb{,-server}
 
 echo "--- downloading and installing configuration for php-fpm and apache-proxy ---"
 wget https://raw.githubusercontent.com/LuyeT/infrastructure-training/master/www.conf
