@@ -2,8 +2,8 @@ echo "---!!!---Configuration---!!!---"
 
 echo "--- Initial configuration setup ---"
 dnf clean all
-dnf update
-dnf install firewalld
+dnf -y update
+dnf -y install firewalld
 
 echo "--- configuration: PHP with PHP-FPM ---"
 echo "--- installing apache and mod_ssl---"
