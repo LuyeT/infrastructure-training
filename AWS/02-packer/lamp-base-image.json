@@ -1,0 +1,30 @@
+{
+  "builders": [
+
+    {
+      "type": "digitalocean",
+      "api_token": "041e8e7b20b52ebac38a183bcd90f3bcda58f5c5d0201af2a5e032f26bd56215",
+      "image": "centos-8-x64",
+      "region": "fra1",
+      "size": "512mb",
+      "ssh_username": "root"
+    }
+  ],
+  "provisioners": [
+      {
+        "type": "file",
+        "source": "{{template_dir}}/../example.com.conf",
+        "destination": "/root/example.com.conf"
+      },
+      {
+        "type": "file",
+        "source": "{{template_dir}}/../www.conf",
+        "destination": "/root/www.conf"
+      },
+      {
+          "type": "shell",
+          "script": "{{template_dir}}/../01-scripts/configuration.sh",
+          "execute_command": "sudo {{.Path}}"
+      }
+  ]
+}
