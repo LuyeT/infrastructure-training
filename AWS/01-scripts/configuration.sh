@@ -21,5 +21,5 @@ cat ./www.conf > /etc/php-fpm.d/www.conf
 
 cat ./example.com.conf > /etc/httpd/conf.d/example.com.conf
 
-tic -x ./termite.terminfo
+tic -x ../termite.terminfo
 
